@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* CSS for product images */
+        .product-image {
+            height: 150px; /* Fixed height for uniformity */
+            object-fit: cover; /* Maintain aspect ratio */
+            border: 2px solid #e2e8f0; /* Light border around images */
+            border-radius: 8px; /* Rounded corners for images */
+            transition: transform 0.3s; /* Smooth hover effect */
+        }
+        .product-image:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-200 to-purple-200">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gradient-to-b from-white to-gray-200 shadow-md h-screen">
+            <div class="p-4">
+                <h1 class="text-xl font-bold text-blue-600">eCommerce Dashboard</h1>
+            </div>
+            <ul class="mt-6">
+                <li class="p-4 hover:bg-blue-100"><a class="text-blue-600" href="#">Products</a></li>
+                <li class="p-4 hover:bg-blue-100"><a class="text-blue-600" href="#">Orders</a></li>
+                <li class="p-4 hover:bg-blue-100"><a class="text-blue-600" href="#">Cart</a></li>
+                <li class="p-4 hover:bg-blue-100"><a class="text-blue-600" href="#">Profile</a></li>
+                <li class="p-4 hover:bg-blue-100"><a class="text-blue-600" href="#">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <header class="flex justify-between items-center bg-blue-500 p-4 rounded">
+                <h2 class="text-2xl font-semibold text-white">Welcome to the eCommerce Dashboard</h2>
+                <div class="relative">
+                    <button class="p-2 bg-yellow-500 text-white rounded">Notifications</button>
+                    <div class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded hidden">
+                        <ul>
+                            <li class="p-2 hover:bg-gray-200">Notification 1</li>
+                            <li class="p-2 hover:bg-gray-200">Notification 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <main class="mt-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Product Card 1 -->
+                    <div class="bg-gradient-to-b from-white to-gray-100 p-4 shadow-lg rounded hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.OctJq06i6wIxTXsGBFIx9AHaHa%26pid%3DApi%26h%3D160&f=1&ipt=46de82efecca15102a57116553207c8931625ca0345681bc3f16f8ab6186005e&ipo=images" alt="Wireless Headphones" class="product-image w-full">
+                        <h3 class="font-semibold mt-2">Wireless Headphones</h3>
+                        <p class="text-gray-600">$89.99</p>
+                        <p class="text-gray-500">Experience the freedom of wireless sound with these high-quality headphones.</p>
+                        <button class="mt-2 bg-green-500 text-white rounded px-4 py-2">Add to Cart</button>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="bg-gradient-to-b from-white to-gray-100 p-4 shadow-lg rounded hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.OTil10RBh8zMsgKlWoqIbgHaHa%26pid%3DApi&f=1&ipt=c55fc3c90d1095a9d3f6571b196db7491c0ec8dc719034d099584fc4039782e6&ipo=images" alt="Smart Watch" class="product-image w-full">
+                        <h3 class="font-semibold mt-2">Smart Watch</h3>
+                        <p class="text-gray-600">$199.99</p>
+                        <p class="text-gray-500">Stay connected and track your fitness with this stylish smart watch.</p>
+                        <button class="mt-2 bg-green-500 text-white rounded px-4 py-2">Add to Cart</button>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="bg-gradient-to-b from-white to-gray-100 p-4 shadow-lg rounded hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.rNxkdzB6EsyKwx3tG_OZvAHaHa%26pid%3DApi%26h%3D160&f=1&ipt=7398744a2827220e6dbe2e6bba18552d96aab0e6b83590aafe99166701bf4562&ipo=images" alt="Bluetooth Speaker" class="product-image w-full">
+                        <h3 class="font-semibold mt-2">Bluetooth Speaker</h3>
+                        <p class="text-gray-600">$49.99</p>
+                        <p class="text-gray-500">Enjoy your favorite music on the go with this portable Bluetooth speaker.</p>
+                        <button class="mt-2 bg-green-500 text-white rounded px-4 py-2">Add to Cart</button>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="bg-gradient-to-b from-white to-gray-100 p-4 shadow-lg rounded hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.dYWi9VjKxY0OsBVtc6JMpwHaFj%26pid%3DApi&f=1&ipt=5d0b2f06d8e28ae7c5252525ba6f1a5b0c589a4dd7a08e43b25c2d73810d05ef&ipo=images" alt="4K Ultra HD TV" class="product-image w-full">
+                        <h3 class="font-semibold mt-2">4K Ultra HD TV</h3>
+                        <p class="text-gray-600">$599.99</p>
+                        <p class="text-gray-500">Immerse yourself in stunning visuals with this 4K Ultra HD TV.</p>
+                        <button class="mt-2 bg-green-500 text-white rounded px-4 py-2">Add to Cart</button>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div class="bg-gradient-to-b from-white to-gray-100 p-4 shadow-lg rounded hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.3g6E0D1CFKh_k-FEZHesCAHaE5%26pid%3DApi%26h%3D160&f=1&ipt=3958de2b475de41ea433e53c745e15e034ef8218e1647330b771fac614ad4fd3&ipo=images" alt="Gaming Laptop" class="product-image w-full">
+                        <h3 class="font-semibold mt-2">Gaming Laptop</h3>
+                        <p class="text-gray-600">$1299.99</p>
+                        <p class="text-gray-500">Powerful gaming laptop with high performance for the ultimate gaming experience.</p>
+                        <button class="mt-2 bg-green-500 text-white rounded px-4 py-2">Add to Cart</button>
+                    </div>
+                    <!-- Product Card 6 -->
+                    <div class="bg-gradient-to-b from-white to-gray-100 p-4 shadow-lg rounded hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.3zI5tGmA-fPWeUBYtvl3ZQHaHa%26pid%3DApi%26h%3D160&f=1&ipt=d7dcc45ced76460f2425abc31f8e5daed3d8abf5669d0d06e00bd94f71181466&ipo=images" alt="Digital Camera" class="product-image w-full">
+                        <h3 class="font-semibold mt-2">Digital Camera</h3>
+                        <p class="text-gray-600">$499.99</p>
+                        <p class="text-gray-500">Capture stunning photos and videos with this high-quality digital camera.</p>
+                        <button class="mt-2 bg-green-500 text-white rounded px-4 py-2">Add to Cart</button>
+                    </div>
+                </div>
+            </main>
+            <footer class="mt-6 p-4 bg-blue-500 text-center text-white">
+                <p>© 2025 eCommerce. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
